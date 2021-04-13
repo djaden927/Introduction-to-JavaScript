@@ -18,6 +18,12 @@ Do the following:
    HINT: no function required
 */
 
+console.log("hello world");
+// let votingAge = 18;
+
+// if(19 > votingAge){
+//   console.log("true");
+// }
 
 
 /*
