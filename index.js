@@ -21,7 +21,7 @@ Do the following:
 
 let votingAge = 18;
 
-if(19 > votingAge){
+if(18 <= votingAge){
   console.log("true");
 }
 
@@ -41,9 +41,10 @@ let firstVariable = 1;
 let secondVariable = 2;
 
 if(secondVariable === 2){
-  firstVariable = 9
+  firstVariable = 9;
+  console.log(firstVariable);
 }
-console.log(firstVariable);
+
 
 
 
@@ -61,7 +62,7 @@ Do the following:
 let a = "1999";
 a = Number(a);
 console.log(a);
-console.log(typeof(a))
+console.log(typeof(a));
 
 
 
@@ -77,7 +78,7 @@ Do the following:
 function multiply(a,b){
     return a * b;
   }
-
+multiply(4,5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -161,7 +162,7 @@ console.log(littleDog(30, .5));
 
 function hungryDog(weight, age){
   bigDog(weight);
-    if(age > 1){
+    if(age => 1){
       return bigDog(weight);
     }
     else{
@@ -194,10 +195,10 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 var computer = Math.random();
-  if(computer < .33){
+  if(computer <= .33){
     computer = "Rock";
   }
-  else if(computer >.33 && computer < .66){
+  else if(computer >.33 && computer <= .66){
     computer = "Paper"
   }
   else{
@@ -209,16 +210,16 @@ function game(user, computer){
       return "it's a tie"
     }
     else if(user === "Rock" && computer === "Scissors"){
-      return "You win!"
+      return "you win!"
     }
     else if(user === "Scissors" && computer === "Paper"){
-      return "You win!"
+      return "you win!"
     }
     else if(user === "Paper" && computer === "Rock"){
-      return "You win!"
+      return "you win!"
     }
     else{
-      return "You lose!"
+      return "you lose!"
     }
 }
   console.log(game("Rock", computer));
@@ -252,7 +253,7 @@ Using the feet function below do the following:
 
 function feet(cm){
     /*add your code here*/
-    let convertedFeet = cm *0.0328084;
+    let convertedFeet = cm /30.48;
     console.log(convertedFeet);
     return convertedFeet;
   }
@@ -272,10 +273,9 @@ Using the annoyingSong function below do the following:
 function annoyingSong(startNum){
         /*add your code here*/
         for (let i = startNum; i > 0; i--){          
-          console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around
-          ${i -1} bottles of soda on the wall`);
+          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
         }
-        return;
+        
   }
 
   console.log(annoyingSong(5));
@@ -297,16 +297,16 @@ Using the grade function below do the following:
   
 function grade(score){
   /*Your Code here */
-  if(score > 90){
+  if(score >= 90){
     return "you got an A";
   }
-  else if(score > 80 && score < 90){
+  else if(score >= 80 && score < 90){
     return "you got a B";
   }
-  else if(score > 70 && score < 80){
+  else if(score >= 70 && score < 80){
     return "you got a C"
   }
-  else if(score > 60 && score < 70){
+  else if(score >= 60 && score < 70){
     return "you got a D";
   }
   else{
@@ -341,14 +341,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-// export default{
-//     foo,
-//     multiply,
-//     dogYears,
-//     hungryDog,
-//     game,
-//     miles,
-//     feet,
-//     annoyingSong,
-//     grade
-// }
+export default{
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
+    annoyingSong,
+    grade
+}
