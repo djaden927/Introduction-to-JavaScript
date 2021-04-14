@@ -195,35 +195,35 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 var computer = Math.random();
-  if(computer <= .33){
-    computer = "Rock";
+  if(computer <= .34){
+    computer = "rock";
   }
-  else if(computer >.33 && computer <= .66){
-    computer = "Paper"
+  else if(computer <= .67){
+    computer = "paper";
   }
-  else{
-    computer = "Scissors";
+  else if(computer > .67){
+    computer = "scissors";
   }
 
 function game(user, computer){
     if(user === computer){
-      return "it's a tie"
+      return "it's a tie";
     }
-    else if(user === "Rock" && computer === "Scissors"){
-      return "you win!"
+    else if(user === "rock" && computer === "scissors"){
+      return "you win!";
     }
-    else if(user === "Scissors" && computer === "Paper"){
-      return "you win!"
+    else if(user === "scissors" && computer === "paper"){
+      return "you win!";
     }
-    else if(user === "Paper" && computer === "Rock"){
-      return "you win!"
+    else if(user === "paper" && computer === "rock"){
+      return "you win!";
     }
     else{
-      return "you lose!"
+      return "you lose!";
     }
 }
-  console.log(game("Rock", computer));
-  game("Rock", computer)
+  console.log(game("rock", computer));
+  game("rock", computer)
   console.log(computer);
 
 
